@@ -12,7 +12,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-04-10',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/oilrigsupport.jpeg',
   },
   {
     id: '2',
@@ -22,7 +22,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-04-05',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.pexels.com/photos/3862627/pexels-photo-3862627.jpeg?auto=compress&cs=tinysrgb&w=800',
+    imageUrl: '/engineeringexcellence.jpeg',
   },
   {
     id: '3',
@@ -32,7 +32,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-28',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.unsplash.com/photo-1495373964423-71ce8cde8b34?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/pipelineinfrastructure.jpeg',
   },
   {
     id: '4',
@@ -42,7 +42,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-20',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=800',
+    imageUrl: '/industriesweserve.jpeg',
   },
   {
     id: '5',
@@ -52,7 +52,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-12',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/maintenance.jpeg',
   },
   {
     id: '6',
@@ -62,7 +62,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-05',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.pexels.com/photos/36453960/pexels-photo-36453960.jpeg?auto=compress&cs=tinysrgb&w=800',
+    imageUrl: '/hero.jpeg',
   },
   {
     id: '7',
@@ -72,7 +72,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-02-25',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+    imageUrl: '/projectmanagement.jpeg',
   },
   {
     id: '8',
@@ -82,14 +82,19 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-02-18',
     author: 'Ludik Energy Team',
-    imageUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/facility.jpeg',
   },
 ]
 
 function getPosts() {
+  const imageMap = Object.fromEntries(defaultPosts.map((p) => [p.id, p.imageUrl]))
   try {
     const stored = localStorage.getItem(BLOG_KEY)
-    if (stored) return JSON.parse(stored)
+    if (stored) {
+      const parsed = JSON.parse(stored)
+      // always use the current local image paths for seeded posts
+      return parsed.map((p) => imageMap[p.id] ? { ...p, imageUrl: imageMap[p.id] } : p)
+    }
     localStorage.setItem(BLOG_KEY, JSON.stringify(defaultPosts))
     return defaultPosts
   } catch {
