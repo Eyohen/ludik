@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import PortfolioPage from './pages/PortfolioPage'
 import BlogPage from './pages/BlogPage'
 import ContactPage from './pages/ContactPage'
+import VendorFormPage from './pages/VendorFormPage'
 import AdminLayout from './pages/admin/AdminLayout'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AdminEmployees from './pages/admin/AdminEmployees'
@@ -29,6 +30,7 @@ function App() {
         <Route path="/projects/portfolio" element={<PortfolioPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/vendor-form" element={<VendorFormPage />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />

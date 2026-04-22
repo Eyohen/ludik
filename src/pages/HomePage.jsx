@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const heroImage = '/hero.jpeg'
 
 const africanEngineers = '/industriesweserve.jpeg'
-const refineryImage = 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1400&q=80'
+const refineryImage = '/facility.jpeg'
 const engineer = '/engineeringexcellence.jpeg'
 
 const metrics = [

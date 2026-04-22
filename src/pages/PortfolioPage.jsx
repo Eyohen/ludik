@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const pipelineImg = 'https://images.unsplash.com/photo-1495373964423-71ce8cde8b34?auto=format&fit=crop&w=1400&q=80'
-const offshoreImg = 'https://images.unsplash.com/photo-1508974482461-fc3b8d8f68c2?auto=format&fit=crop&w=1400&q=80'
+const pipelineImg = '/pipelineinfrastructure.jpeg'
+const offshoreImg = '/ogbainbiri.jpeg'
 const civilImg = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80'
 
 const caseStudies = [
