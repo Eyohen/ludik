@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const rigImg = 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1400&q=80'
-const pipelineImg = 'https://images.unsplash.com/photo-1495373964423-71ce8cde8b34?auto=format&fit=crop&w=1400&q=80'
-const projectMgmtImg = 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400'
-const maintenanceImg = 'https://images.pexels.com/photos/3862627/pexels-photo-3862627.jpeg?auto=compress&cs=tinysrgb&w=1400'
+const rigImg = '/oilrigsupport.jpeg'
+const pipelineImg = '/pipelineinfrastructure.jpeg'
+const projectMgmtImg = '/projectmanagement.jpeg'
+const maintenanceImg = '/maintenance.jpeg'
 
 const services = [
   {
