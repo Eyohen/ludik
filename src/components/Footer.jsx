@@ -1,19 +1,23 @@
+import { Link } from 'react-router-dom'
+
 const quickLinks = [
-  { name: 'Company', href: '#company' },
-  { name: 'Services', href: '#services' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Operations', href: '#operations' },
-  { name: 'Compliance', href: '#compliance' },
-];
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Our Team', href: '/about/team' },
+  { name: 'Policy Documents', href: '/about/policy' },
+  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Our Portfolio', href: '/projects/portfolio' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
+]
 
 const services = [
-  'Construction',
-  'Civil engineering',
-  'Electrification',
-  'Dredging',
-  'Fabrication',
-  'Oil and gas services',
-];
+  'Oil Rig Project Support',
+  'Pipeline Infrastructure',
+  'Energy Project Management',
+  'Industrial Maintenance Support',
+]
 
 const Footer = () => {
   return (
@@ -23,32 +27,48 @@ const Footer = () => {
           <div className="md:col-span-2">
             <span className="font-display text-2xl font-extrabold text-[#fff8d8]">Ludik Energy Limited</span>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-[#fff8d8]/70">
-              Construction, structural civil engineering, borehole, electrification, dredging, fabrication, FPSO, oil and gas services, general supply, and contract execution.
+              A premier indigenous oil and gas engineering company delivering advanced, high-performance solutions across the energy value chain in Nigeria and beyond.
             </p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-[#fff8d8]/62">
-              Alba Plaza, Plot 91, Obafemi Awolowo Way, Jabi, Abuja.
+              State Library Complex Calabar, Cross River State, Nigeria.
             </p>
+            <div className="mt-4 space-y-1">
+              <a href="tel:+2348037337221" className="block text-sm text-[#f4d35e]/80 transition-colors hover:text-[#f4d35e]">
+                +234 803 733 7221
+              </a>
+              <a href="tel:+2348035703562" className="block text-sm text-[#f4d35e]/80 transition-colors hover:text-[#f4d35e]">
+                +234 803 570 3562
+              </a>
+            </div>
           </div>
 
           <div>
             <h4 className="mb-4 text-sm font-semibold text-[#f4d35e]">Quick Links</h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-sm text-[#fff8d8]/65 transition-colors hover:text-[#fff8d8]">
+                  <Link
+                    to={link.href}
+                    className="text-sm text-[#fff8d8]/65 transition-colors hover:text-[#fff8d8]"
+                  >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-[#f4d35e]">Services</h4>
+            <h4 className="mb-4 text-sm font-semibold text-[#f4d35e]">Our Services</h4>
             <ul className="space-y-2.5">
               {services.map((service) => (
-                <li key={service} className="text-sm text-[#fff8d8]/65">
-                  {service}
+                <li key={service}>
+                  <Link
+                    to="/services"
+                    className="text-sm text-[#fff8d8]/65 transition-colors hover:text-[#fff8d8]"
+                  >
+                    {service}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -57,20 +77,17 @@ const Footer = () => {
 
         <div className="flex flex-col items-start justify-between gap-3 border-t border-[#f4d35e]/18 pt-6 sm:flex-row sm:items-center">
           <p className="text-xs text-[#fff8d8]/50">
-            &copy; 2026 Ludik Energy Limited. All rights reserved.
+            &copy; {new Date().getFullYear()} Ludik Energy Limited. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 text-xs">
             <a href="mailto:ludikenergy@gmail.com" className="text-[#fff8d8]/55 transition-colors hover:text-[#fff8d8]">
               ludikenergy@gmail.com
             </a>
-            <a href="tel:+2348037337221" className="text-[#fff8d8]/55 transition-colors hover:text-[#fff8d8]">
-              +234 (0) 803 733 7221
-            </a>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
