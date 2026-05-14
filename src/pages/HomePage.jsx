@@ -1,7 +1,21 @@
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const heroImage = '/hero.jpeg'
+const heroImages = [
+  {
+    src: '/hero.jpeg',
+    alt: 'Industrial energy facility with pipework and steel structures in Nigeria',
+  },
+  {
+    src: '/hero2.jpg',
+    alt: 'Energy infrastructure project site operated by industrial engineers',
+  },
+  {
+    src: '/hero3.png',
+    alt: 'Oil and gas engineering facility supporting African energy operations',
+  },
+]
 
 const africanEngineers = '/industriesweserve.jpeg'
 const refineryImage = '/facility.jpeg'
@@ -41,16 +55,46 @@ const industries = [
   'Engineering & Construction Projects',
 ]
 
+const partners = [
+  { name: 'Chevron', logo: '/chevron.jpg' },
+  { name: 'Erasko', logo: '/erasko.jpg' },
+  { name: 'Heritage', logo: '/HERITAGE.jpg' },
+  { name: 'Mobil', logo: '/Mobil.png' },
+  { name: 'NNPC', logo: '/nnpc.png' },
+  { name: 'Oando', logo: '/oando.jpg' },
+  { name: 'Seplat Energy', logo: '/seplat energy.png' },
+  { name: 'Shell', logo: '/SHELL.png' },
+  { name: 'VG Energy', logo: '/vgenergy.jpg' },
+]
+
 const HomePage = () => {
+  const [activeHeroImage, setActiveHeroImage] = useState(0)
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveHeroImage((currentImage) => (currentImage + 1) % heroImages.length)
+    }, 3000)
+
+    return () => window.clearInterval(intervalId)
+  }, [])
+
   return (
     <div>
       {/* Hero */}
       <section className="relative min-h-[92svh] overflow-hidden bg-[#071b3a] text-white">
-        <img
-          src={heroImage}
-          alt="Industrial energy facility with pipework and steel structures in Nigeria"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <div
+          className="absolute inset-0 flex h-full transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${activeHeroImage * 100}%)` }}
+        >
+          {heroImages.map((image) => (
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              className="h-full w-full shrink-0 object-cover"
+            />
+          ))}
+        </div>
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,58,0.95),rgba(14,47,90,0.85),rgba(244,211,94,0.12))]" />
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#fff8d8] to-transparent" />
 
@@ -65,7 +109,7 @@ const HomePage = () => {
               LUDIK Energy Limited
             </p>
             <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.06] sm:text-5xl lg:text-6xl xl:text-7xl">
-              Premier indigenous oil and gas engineering for Africa's energy future.
+              Premier Indigenous Upstream oil and gas engineering for Africa's energy future.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
               Positioned at the intersection of engineering innovation and operational excellence, we deliver comprehensive solutions that address the most complex challenges in today's energy industry.
@@ -100,6 +144,38 @@ const HomePage = () => {
               <p className="mt-1 text-sm font-semibold text-[#526173]">{metric.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="border-b border-[#e7ddaa] bg-white px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#b48f10]">Our Partners</p>
+              <h2 className="mt-2 text-2xl font-extrabold text-[#071b3a] sm:text-3xl">
+                Trusted across the energy value chain.
+              </h2>
+            </div>
+            <p className="max-w-xl text-sm leading-6 text-[#526173] md:text-right">
+              We support projects and operations connected to leading energy organisations across Nigeria and the wider region.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-9">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="flex h-24 items-center justify-center rounded-lg border border-[#e7ddaa] bg-[#fff8d8]/45 p-4 shadow-sm shadow-[#071b3a]/5"
+              >
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="max-h-14 max-w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

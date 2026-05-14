@@ -6,12 +6,12 @@ const contactImg = 'https://images.pexels.com/photos/1488463/pexels-photo-148846
 const SUBMISSIONS_KEY = 'ludik_submissions'
 
 const faqs = [
-  { q: 'What is your typical project timeline?', a: 'Projects range from 6–24 months depending on scope, complexity, and site conditions. We develop detailed schedules at the outset of every engagement and maintain regular milestone reporting throughout.' },
-  { q: 'Do you work internationally?', a: 'Yes. We operate across Africa, the Middle East, and North America, with our primary operations based in Nigeria.' },
+  { q: 'What is your typical project timeline?', a: 'Depending on scope of project, complexity, and site conditions, timelines can begin from 3 weeks and above, we develop detailed schedules at the onset of every engagement and maintain regular milestone reporting throughout' },
+  { q: 'Do you work internationally?', a: 'Yes. We operate across Africa at the moment with intention to operate beyond, with our primary operations based in South South Nigeria.' },
   { q: 'How do you ensure safety on your projects?', a: 'Through strict HSE protocols, comprehensive compliance management, regular safety audits, and mandatory training for all site personnel. Safety is non-negotiable in every Ludik Energy project.' },
   { q: 'What is your response time for enquiries?', a: 'We respond to all enquiries within 24 hours. For urgent matters, please call us directly on the numbers provided.' },
   { q: 'Can you handle custom or bespoke projects?', a: 'Yes. We specialise in tailoring our services to meet the unique requirements of each client and project environment.' },
-  { q: 'Do you offer maintenance contracts?', a: 'Yes. We offer flexible maintenance programmes — from one-off corrective maintenance to long-term retainer agreements covering preventive and predictive maintenance services.' },
+  { q: 'Do you offer maintenance contracts?', a: 'Yes. We offer sectional pipeline replacement to full replacement and any other rig maintenance contracts from short term agreements to long term retainer agreements covering preventive and predictive maintenance services.' },
 ]
 
 function saveSubmission(data) {
@@ -108,7 +108,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-wide text-[#526173]">Phone</p>
-                  <p className="mt-1 font-semibold text-[#071b3a]">+234 803 733 7221</p>
+                  <p className="mt-1 font-semibold text-[#071b3a]">+234 915 761 9014</p>
                 </div>
               </a>
 
@@ -123,7 +123,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-wide text-[#526173]">Phone</p>
-                  <p className="mt-1 font-semibold text-[#071b3a]">+234 803 570 3562</p>
+                  <p className="mt-1 font-semibold text-[#071b3a]">+234 915 761 9014</p>
                 </div>
               </a>
 
@@ -136,7 +136,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-wide text-[#526173]">Email</p>
-                  <p className="mt-1 font-semibold text-[#071b3a]">ludikenergy@gmail.com</p>
+                  <p className="mt-1 font-semibold text-[#071b3a]">info@ludikenergyltd.com or  ludik.energy2026@gmail.com</p>
                 </div>
               </div>
             </div>

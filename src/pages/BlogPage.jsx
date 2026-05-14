@@ -127,10 +127,17 @@ const BlogPage = () => {
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-[#f4d35e]">Blog & News</p>
             <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.08] sm:text-5xl">
-              Industry insights from Ludik Energy.
+              Strategic Partnerships Driving Energy Growth
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#fff8d8]/80">
-              Perspectives on oil and gas engineering, operational excellence, safety, and the evolving energy landscape across Africa and beyond.
+              The Energy Cross River Expo themed "Unlocking Cross River Energy Using Sustainable Finance", brought together government officials, industry stakeholders, investors, development partners, energy experts and finance houses, to discuss strategies for advancing energy development in Cross River State. Ludik Energy Ltd heavily represented, engaged in dialogue, knowledge sharing, and collaboration aimed at promoting investment in the State's energy sector.
+              In addition to identifying energy opportunities, Public- Private Partnership models that could be deployed to finance and implement energy projects include:
+              •⁠  ⁠Concession model
+              •⁠  ⁠Build -Operate - Transfer (BOT) model
+              •⁠  ⁠Joint Venture Partnerships
+              •⁠  ⁠Lease and management contracts
+              •⁠  ⁠Green Public Private Partnership Financing
+              Amongst these PPP structures, Ludik Energy Ltd intends to engage wholly in the State's energy blueprint project.
             </p>
           </motion.div>
         </div>

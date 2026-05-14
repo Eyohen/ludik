@@ -1,44 +1,8 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
-const TEAM_KEY = 'ludik_team_members'
-
-const defaultTeam = [
-  {
-    id: '1',
-    name: 'Ulang Adie',
-    title: 'Director Operations',
-    bio: 'Ludik Energy is fully committed to the objectives of the Nigerian Oil and Gas Industry Content Development Act (NOGICD) Act, thus recognising the importance of utilizing local human and material resources to drive national economic growth, build capacity and ensure sustainable industry participation. BSc Accounting',
-    imageUrl: '/ulangadie.jpeg',
-  },
-  {
-    id: '2',
-    name: 'Dr Jonathan Omini',
-    title: 'Director Admin/Finance',
-    bio: 'Ludik Energy has recognised its responsibility to contribute positively to the socio-economic development of its host communities while minimizing environmental impact. Our CSR commitment are sustainable practices, ethical conduct, and community engagement. PhD Criminology (major Criminal Justice)',
-    imageUrl: '/jonathanomini.jpg',
-  },
-  {
-    id: '3',
-    name: 'Emilia-Cortez Eyo',
-    title: 'Human Resources',
-    bio: 'Joined the company as the Financial accountant and her approach to resources and divergent experiences gave way to being appointed the Human Resources Manager MSc Finance and Banking Certificate; Human Psychology jmHSE 1-3 ',
-    imageUrl: '/emilia.jpeg',
-  },
-]
+import { getTeam } from '../data/team'
 
 const teamHero = 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1400'
-
-function getTeam() {
-  try {
-    const stored = localStorage.getItem(TEAM_KEY)
-    if (stored) return JSON.parse(stored)
-    localStorage.setItem(TEAM_KEY, JSON.stringify(defaultTeam))
-    return defaultTeam
-  } catch {
-    return defaultTeam
-  }
-}
 
 const TeamPage = () => {
   const [team, setTeam] = useState([])
@@ -106,7 +70,14 @@ const TeamPage = () => {
                     <span className="block h-1 w-10 rounded-lg bg-[#f4d35e]" />
                     <h3 className="mt-4 text-xl font-extrabold text-[#071b3a]">{member.name}</h3>
                     <p className="mt-1 text-sm font-bold uppercase tracking-wide text-[#b48f10]">{member.title}</p>
-                    {member.bio && <p className="mt-3 text-sm leading-7 text-[#526173]">{member.bio}</p>}
+                    {member.bio && <p className="mt-1 whitespace-pre-line text-sm leading-7 text-[#526173]">{member.bio}</p>}
+                    {member.credentials?.length > 0 && (
+                      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-[#526173]">
+                        {member.credentials.map((credential) => (
+                          <li key={credential}>{credential}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </motion.article>
               ))}

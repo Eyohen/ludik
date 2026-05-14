@@ -22,13 +22,21 @@ const services = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-[#f4d35e]/20 bg-[#071b3a] px-4 pb-8 pt-14 text-white">
-      <div className="mx-auto max-w-7xl">
+    <footer className="relative overflow-hidden border-t border-[#f4d35e]/20 bg-[#071b3a] px-4 pb-8 pt-14 text-white">
+      <img
+        src="/footer.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,58,0.97),rgba(7,27,58,0.9),rgba(14,47,90,0.82))]" />
+
+      <div className="relative mx-auto max-w-7xl">
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <span className="font-display text-2xl font-extrabold text-[#fff8d8]">Ludik Energy Limited</span>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-[#fff8d8]/70">
-              A premier indigenous oil and gas engineering company delivering advanced, high-performance solutions across the energy value chain in Nigeria and beyond.
+              A Premier Indigenous Upstream oil and gas engineering company delivering advanced, high-performance solutions across the energy value chain in Nigeria and beyond.
             </p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-[#fff8d8]/62">
               State Library Complex Calabar, Cross River State, Nigeria.

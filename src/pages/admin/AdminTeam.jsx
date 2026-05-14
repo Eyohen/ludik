@@ -1,47 +1,7 @@
 import { useEffect, useState } from 'react'
-
-const TEAM_KEY = 'ludik_team_members'
-
-const defaultTeam = [
-  {
-    id: '1',
-    name: 'Engr. Chukwuemeka Okafor',
-    title: 'Managing Director & CEO',
-    bio: 'A seasoned energy industry executive with over 20 years of experience in oil and gas engineering, project management, and business development across West Africa.',
-    imageUrl: 'https://images.pexels.com/photos/3785406/pexels-photo-3785406.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-  {
-    id: '2',
-    name: 'Engr. Amaka Eze',
-    title: 'Director of Engineering & Operations',
-    bio: 'Leads engineering design and field operations with deep expertise in pipeline infrastructure, rig support, and HSE compliance for upstream energy projects.',
-    imageUrl: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-  {
-    id: '3',
-    name: 'Mr. Emeka Nwosu',
-    title: 'Head of Projects & Business Development',
-    bio: 'Drives strategic growth and project acquisition, with a track record of securing and managing multi-million dollar energy infrastructure contracts across Nigeria.',
-    imageUrl: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-]
+import { getTeam, saveTeam } from '../../data/team'
 
 const emptyForm = { name: '', title: '', bio: '', imageUrl: '' }
-
-function getTeam() {
-  try {
-    const stored = localStorage.getItem(TEAM_KEY)
-    if (stored) return JSON.parse(stored)
-    localStorage.setItem(TEAM_KEY, JSON.stringify(defaultTeam))
-    return defaultTeam
-  } catch {
-    return defaultTeam
-  }
-}
-
-function saveTeam(list) {
-  localStorage.setItem(TEAM_KEY, JSON.stringify(list))
-}
 
 const AdminTeam = () => {
   const [members, setMembers] = useState([])
@@ -127,7 +87,14 @@ const AdminTeam = () => {
               <div className="p-5">
                 <h3 className="font-extrabold text-[#071b3a]">{m.name}</h3>
                 <p className="text-sm font-bold text-[#b48f10]">{m.title}</p>
-                {m.bio && <p className="mt-2 text-sm leading-6 text-[#526173] line-clamp-3">{m.bio}</p>}
+                {m.bio && <p className="mt-2 whitespace-pre-line text-sm leading-6 text-[#526173] line-clamp-3">{m.bio}</p>}
+                {m.credentials?.length > 0 && (
+                  <ul className="mt-2 list-disc space-y-0.5 pl-5 text-sm leading-6 text-[#526173]">
+                    {m.credentials.map((credential) => (
+                      <li key={credential}>{credential}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="mt-4 flex gap-3 border-t border-[#e7ddaa] pt-3">
                   <button onClick={() => openEdit(m)} className="text-xs font-bold text-[#071b3a] underline underline-offset-2">Edit</button>
                   <button onClick={() => setDeleteConfirm(m.id)} className="text-xs font-bold text-red-500 underline underline-offset-2">Delete</button>
