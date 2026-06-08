@@ -56,13 +56,23 @@ const defaultPosts = [
   },
   {
     id: '6',
-    title: 'Strategic Partnerships Driving Energy Growth',
+    title: 'Strategic Partnerships Driving Energy Growth: March 2026',
     category: 'Industry Insight',
     excerpt: 'The Energy Cross River Expo themed "Unlocking Cross River Energy Using Sustainable Finance", brought together government officials, industry stakeholders, investors, development partners, energy experts and finance houses, to discuss strategies for advancing energy development in Cross River State. Ludik Energy Ltd heavily represented, engaged in dialogue, knowledge sharing, and collaboration aimed at promoting investment in the States energy sector. In addition to identifying energy opportunities, Public- Private Partnership models that could be deployed to finance and implement energy projects include:',
     content: 'The Energy Cross River Expo themed "Unlocking Cross River Energy Using Sustainable Finance", brought together government officials, industry stakeholders, investors, development partners, energy experts and finance houses, to discuss strategies for advancing energy development in Cross River State. Ludik Energy Ltd heavily represented, engaged in dialogue, knowledge sharing, and collaboration aimed at promoting investment in the States energy sector. In addition to identifying energy opportunities, Public- Private Partnership models that could be deployed to finance and implement energy projects include:',
     date: '2026-02-25',
     author: 'Ludik Energy Team',
     imageUrl: '/strategic.jpeg',
+  },
+  {
+    id: '7',
+    title: 'Site Tour with Foreign counterparts: April, 2026',
+    category: 'Industry Insight',
+    excerpt: 'Digging into opportunities in the upstream oil and gas sector is the bane to expanding beyond the shores of Nigeria.Prospecting delegates from Guinea Sarlu came around to Nigeria on an inspection tour and capacity evaluation around our most recent sites where work is on-going at the moment.the inspection span from Lagos, Delta, Bayelsa and Rivers States particularly at our regulatory coordination, HSE implementation, Quality Assurance with Technical deployment and commission of projects. we hope that at the end, we all can shake hands over deliverables from Ludik Energy Limited',
+    content: 'Digging into opportunities in the upstream oil and gas sector is the bane to expanding beyond the shores of Nigeria.Prospecting delegates from Guinea Sarlu came around to Nigeria on an inspection tour and capacity evaluation around our most recent sites where work is on-going at the moment.the inspection span from Lagos, Delta, Bayelsa and Rivers States particularly at our regulatory coordination, HSE implementation, Quality Assurance with Technical deployment and commission of projects. we hope that at the end, we all can shake hands over deliverables from Ludik Energy Limited',
+    date: '2026-02-25',
+    author: 'Ludik Energy Team',
+    imageUrl: '/sitetour.jpeg',
   },
   
 ]
