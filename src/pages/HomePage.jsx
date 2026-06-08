@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const heroImages = [
   {
-    src: '/hero.jpeg',
+    src: '/hero1.jpeg',
     alt: 'Industrial energy facility with pipework and steel structures in Nigeria',
   },
   {

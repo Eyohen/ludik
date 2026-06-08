@@ -22,7 +22,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-04-05',
     author: 'Ludik Energy Team',
-    imageUrl: '/engineeringexcellence.jpeg',
+    imageUrl: '/safetycom.jpeg',
   },
   {
     id: '3',
@@ -56,34 +56,15 @@ const defaultPosts = [
   },
   {
     id: '6',
-    title: 'HSE Standards in Nigerian Upstream Operations',
-    category: 'Industry Insight',
-    excerpt: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.',
-    content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
-    date: '2026-03-05',
-    author: 'Ludik Energy Team',
-    imageUrl: '/hero.jpeg',
-  },
-  {
-    id: '7',
     title: 'Strategic Partnerships Driving Energy Growth',
     category: 'Industry Insight',
-    excerpt: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.',
-    content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
+    excerpt: 'The Energy Cross River Expo themed "Unlocking Cross River Energy Using Sustainable Finance", brought together government officials, industry stakeholders, investors, development partners, energy experts and finance houses, to discuss strategies for advancing energy development in Cross River State. Ludik Energy Ltd heavily represented, engaged in dialogue, knowledge sharing, and collaboration aimed at promoting investment in the States energy sector. In addition to identifying energy opportunities, Public- Private Partnership models that could be deployed to finance and implement energy projects include:',
+    content: 'The Energy Cross River Expo themed "Unlocking Cross River Energy Using Sustainable Finance", brought together government officials, industry stakeholders, investors, development partners, energy experts and finance houses, to discuss strategies for advancing energy development in Cross River State. Ludik Energy Ltd heavily represented, engaged in dialogue, knowledge sharing, and collaboration aimed at promoting investment in the States energy sector. In addition to identifying energy opportunities, Public- Private Partnership models that could be deployed to finance and implement energy projects include:',
     date: '2026-02-25',
     author: 'Ludik Energy Team',
-    imageUrl: '/projectmanagement.jpeg',
+    imageUrl: '/strategic.jpeg',
   },
-  {
-    id: '8',
-    title: 'Brownfield Revamps: Maximising Existing Asset Value',
-    category: 'Industry Insight',
-    excerpt: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.',
-    content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
-    date: '2026-02-18',
-    author: 'Ludik Energy Team',
-    imageUrl: '/facility.jpeg',
-  },
+  
 ]
 
 function getPosts() {

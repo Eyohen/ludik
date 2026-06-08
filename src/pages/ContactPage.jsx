@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const contactImg = 'https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1400'
+const contactImg = '/contactus.jpeg'
 
 const SUBMISSIONS_KEY = 'ludik_submissions'
 
@@ -58,7 +58,7 @@ const ContactPage = () => {
         <img
           src={contactImg}
           alt="Aerial view of Calabar, Cross River State, Nigeria"
-          className="absolute inset-0 h-full w-full object-cover opacity-20"
+          className="absolute inset-0 h-full w-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#071b3a]/95 to-[#071b3a]/70" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

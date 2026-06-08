@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const pipelineImg = '/pipelineinfrastructure.jpeg'
+const pipelineImg = '/crudeoilflow.jpeg'
 const offshoreImg = '/ogbainbiri.jpeg'
 const civilImg = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80'
 
