@@ -89,8 +89,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Ludik Energy Limited. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 text-xs">
-            <a href="mailto:ludikenergy@gmail.com" className="text-[#fff8d8]/55 transition-colors hover:text-[#fff8d8]">
-              ludikenergy@gmail.com
+            <a href="mailto:info@ludikenergy.com" className="text-[#fff8d8]/55 transition-colors hover:text-[#fff8d8]">
+              info@ludikenergy.com
             </a>
           </div>
         </div>

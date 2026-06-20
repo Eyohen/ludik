@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const pipelineImg = '/crudeoilflow.jpeg'
+const pipelineImg = '/pipeline.jpeg'
 const offshoreImg = '/ogbainbiri.jpeg'
 const civilImg = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80'
+const crudeoilflow = '/crudeoilflow.jpeg'
+const servicesheader = '/services.jpeg'
 
 const caseStudies = [
   {
@@ -37,7 +39,7 @@ const caseStudies = [
     scope: 'High Pressure crude oil flow system project including P & id project including tank construction, bund wall and piping works, structural steelwork, and associated civil engineering.',
     outcome: 'Successfully delivered the full storage system with all civil, mechanical, and piping works completed to client specification. The facility has been operating without incident since commissioning.',
     tags: ['Storage', 'Civil Works', 'Piping', 'Tank Construction'],
-    image: pipelineImg,
+    image: crudeoilflow,
     imageAlt: 'Large crude oil storage tanks and piping infrastructure at an African facility',
   },
 ]
@@ -46,8 +48,14 @@ const PortfolioPage = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-[#071b3a] pb-20 pt-32 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#071b3a] pb-20 pt-32 text-white">
+        <img
+          src={servicesheader}
+          alt="Energy engineering services and industrial project operations"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#071b3a]/95 to-[#071b3a]/70" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-[#f4d35e]">Our Portfolio</p>
             <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">

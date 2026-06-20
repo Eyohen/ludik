@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
+
+const servicesheader = '/services.jpeg'
+
 const rigImg = '/oilrigsupport.jpeg'
 const pipelineImg = '/pipelineinfrastructure.jpeg'
 const projectMgmtImg = '/projectmanagement.jpeg'
@@ -78,6 +81,11 @@ const ServicesPage = () => {
     <div>
       {/* Hero */}
       <section className="bg-[#071b3a] pb-20 pt-32 text-white">
+        <img
+          src={servicesheader}
+          alt="services"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+        />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-[#f4d35e]">Our Services</p>

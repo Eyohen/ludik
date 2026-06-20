@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const BLOG_KEY = 'ludik_blog_posts'
+const BLOG_SEED_VERSION_KEY = 'ludik_blog_posts_seed_version'
 
 const emptyForm = {
   title: '',
@@ -24,6 +25,7 @@ function getPosts() {
 
 function savePosts(list) {
   localStorage.setItem(BLOG_KEY, JSON.stringify(list))
+  localStorage.setItem(BLOG_SEED_VERSION_KEY, 'custom')
 }
 
 function formatDate(str) {

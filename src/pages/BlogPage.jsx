@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 const BLOG_KEY = 'ludik_blog_posts'
+const BLOG_SEED_VERSION_KEY = 'ludik_blog_posts_seed_version'
+const BLOG_SEED_VERSION = '2026-06-12-ludik-blog-v1'
 
 const defaultPosts = [
   {
@@ -77,17 +79,43 @@ const defaultPosts = [
   
 ]
 
+function isSeededPost(post) {
+  const seed = defaultPosts.find((defaultPost) => defaultPost.id === post?.id)
+  return Boolean(seed && seed.title === post.title && seed.author === post.author)
+}
+
+function isSeededBlog(list) {
+  return (
+    Array.isArray(list) &&
+    list.length === defaultPosts.length &&
+    list.every(isSeededPost)
+  )
+}
+
+function seedDefaultPosts() {
+  localStorage.setItem(BLOG_KEY, JSON.stringify(defaultPosts))
+  localStorage.setItem(BLOG_SEED_VERSION_KEY, BLOG_SEED_VERSION)
+  return defaultPosts
+}
+
 function getPosts() {
   const imageMap = Object.fromEntries(defaultPosts.map((p) => [p.id, p.imageUrl]))
   try {
     const stored = localStorage.getItem(BLOG_KEY)
+    const seedVersion = localStorage.getItem(BLOG_SEED_VERSION_KEY)
+
     if (stored) {
       const parsed = JSON.parse(stored)
+      const shouldRefreshSeededBlog = seedVersion !== BLOG_SEED_VERSION && isSeededBlog(parsed)
+
+      if (shouldRefreshSeededBlog) {
+        return seedDefaultPosts()
+      }
+
       // always use the current local image paths for seeded posts
       return parsed.map((p) => imageMap[p.id] ? { ...p, imageUrl: imageMap[p.id] } : p)
     }
-    localStorage.setItem(BLOG_KEY, JSON.stringify(defaultPosts))
-    return defaultPosts
+    return seedDefaultPosts()
   } catch {
     return defaultPosts
   }

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { getTeam } from '../data/team'
 
-const teamHero = 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1400'
+const teamHero = '/team.jpeg'
 
 const TeamPage = () => {
   const [team, setTeam] = useState([])

@@ -136,7 +136,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-wide text-[#526173]">Email</p>
-                  <p className="mt-1 font-semibold text-[#071b3a]">info@ludikenergyltd.com or  ludik.energy2026@gmail.com</p>
+                  <p className="mt-1 font-semibold text-[#071b3a]">info@ludikenergy.com</p>
                 </div>
               </div>
             </div>
