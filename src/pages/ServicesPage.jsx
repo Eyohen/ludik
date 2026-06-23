@@ -80,13 +80,14 @@ const ServicesPage = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-[#071b3a] pb-20 pt-32 text-white">
+      <section className="relative overflow-hidden bg-[#071b3a] pb-20 pt-32 text-white">
         <img
           src={servicesheader}
           alt="services"
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#071b3a]/95 to-[#071b3a]/70" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-[#f4d35e]">Our Services</p>
             <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">
