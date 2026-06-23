@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const pipelineImg = '/pipeline.jpeg'
 const offshoreImg = '/ogbainbiri.jpeg'
 const civilImg = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80'
-const crudeoilflow = '/crudeoilflow.jpeg'
+const crudeoilflow = '/crudeoilflow2.jpeg'
 const servicesheader = '/services.jpeg'
 
 const caseStudies = [

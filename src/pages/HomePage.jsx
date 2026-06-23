@@ -57,7 +57,7 @@ const industries = [
 
 const partners = [
   { name: 'Chevron', logo: '/chevron.jpg' },
-  { name: 'Erasko', logo: '/erasko.jpg' },
+  { name: 'Erasko', logo: '/erasko.jpeg' },
   { name: 'Heritage', logo: '/HERITAGE.jpg' },
   { name: 'Mobil', logo: '/Mobil.png' },
   { name: 'NNPC', logo: '/nnpc.png' },
