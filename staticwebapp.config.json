@@ -1,15 +1,18 @@
 {
+  "globalHeaders": {
+    "Cache-Control": "no-store, max-age=0, must-revalidate"
+  },
   "routes": [
     {
       "route": "/",
       "headers": {
-        "Cache-Control": "no-store, max-age=0"
+        "Cache-Control": "no-store, max-age=0, must-revalidate"
       }
     },
     {
       "route": "/index.html",
       "headers": {
-        "Cache-Control": "no-store, max-age=0"
+        "Cache-Control": "no-store, max-age=0, must-revalidate"
       }
     },
     {
@@ -17,16 +20,13 @@
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"
       }
-    },
-    {
-      "route": "/*",
-      "headers": {
-        "Cache-Control": "no-cache, max-age=0, must-revalidate"
-      }
     }
   ],
   "navigationFallback": {
-    "rewrite": "/index.html"
+    "rewrite": "/index.html",
+    "exclude": [
+      "/*.{css,js,png,jpg,jpeg,webp,gif,svg,ico,woff,woff2,json,txt}"
+    ]
   },
   "platform": {
     "apiRuntime": "node:18"

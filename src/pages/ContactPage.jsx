@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { assetUrl } from '../utils/assetUrl'
 
-const contactImg = '/contactus.jpeg'
+const contactImg = assetUrl('/contactus.jpeg')
 
 const SUBMISSIONS_KEY = 'ludik_submissions'
 

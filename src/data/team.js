@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assetUrl'
+
 export const TEAM_KEY = 'ludik_team_members'
 const TEAM_SEED_VERSION_KEY = 'ludik_team_members_seed_version'
 const TEAM_SEED_VERSION = '2026-05-06-ludik-team-v3'
@@ -9,7 +11,7 @@ export const defaultTeam = [
     title: 'Director Operations',
     bio: 'Ludik Energy is fully committed to the objectives of the Nigerian Oil and Gas Industry Content Development Act (NOGICD) Act, thus recognising the importance of utilizing local human and material resources to drive national economic growth, build capacity and ensure sustainable industry participation.',
     credentials: ['BSc Accounting'],
-    imageUrl: '/ulangadie.jpeg',
+    imageUrl: assetUrl('/ulangadie.jpeg'),
   },
   {
     id: '2',
@@ -17,7 +19,7 @@ export const defaultTeam = [
     title: 'Director Admin/Finance',
     bio: 'Ludik Energy has recognised its responsibility to contribute positively to the socio-economic development of its host communities while minimizing environmental impact.\n\nOur CSR commitment is sustainable practices, ethical conduct, and community engagement.',
     credentials: ['PhD Criminology (major Criminal Justice)'],
-    imageUrl: '/jonathanomini.jpg',
+    imageUrl: assetUrl('/jonathanomini.jpg'),
   },
   {
     id: '3',
@@ -25,7 +27,7 @@ export const defaultTeam = [
     title: 'Head of Human Resources/ Corporate',
     bio: 'Joined the company as the financial accountant and her approach to resources and divergent experiences gave way to being appointed the Human Resources Manager.',
     credentials: ['MSc Finance and Banking', 'Certificate; Human Psychology', 'HSE 1-3'],
-    imageUrl: '/emilia.jpeg',
+    imageUrl: assetUrl('/emilia.jpeg'),
   },
   {
     id: '4',
@@ -33,7 +35,7 @@ export const defaultTeam = [
     title: 'Head of Accounts',
     bio: 'combines technical depth in accounting, forensic investigation, and IT systems with 28 years of practical experience across high-risk industries Oil & Gas, delivering savings of over N500m through recovery of overpayments and blocking leakages. Qualifications & Education',
     credentials: ['Associate, Institute of Chartered Accountants of Nigeria ACA', 'Certified Forensic Accountant CFA', 'Certified Information Systems Auditor CISA – ISACA','Master of Business Administration MBA – University of Calabar','B.Sc. Accounting – University of Calabar','Registered Incorporated Internal Auditor of Nigeria'],
-    imageUrl: '/cobham.jpeg',
+    imageUrl: assetUrl('/cobham.jpeg'),
   },
 ]
 

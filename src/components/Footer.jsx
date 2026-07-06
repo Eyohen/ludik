@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../utils/assetUrl'
 
 const quickLinks = [
   { name: 'Home', href: '/' },
@@ -24,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden border-t border-[#f4d35e]/20 bg-[#071b3a] px-4 pb-8 pt-14 text-white">
       <img
-        src="/footer.jpg"
+        src={assetUrl('/footer.jpg')}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"

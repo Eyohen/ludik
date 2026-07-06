@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../utils/assetUrl'
 
 
-const servicesheader = '/services.jpeg'
+const servicesheader = assetUrl('/services.jpeg')
 
-const rigImg = '/oilrigprojectsupport.jpeg'
-const pipelineImg = '/pipelineinfrastructure.jpeg'
-const projectMgmtImg = '/energyprojectman.jpeg'
-const maintenanceImg = '/industrialmaintenance.jpeg'
+const rigImg = assetUrl('/oilrigprojectsupport.jpeg')
+const pipelineImg = assetUrl('/pipelineinfrastructure.jpeg')
+const projectMgmtImg = assetUrl('/energyprojectman.jpeg')
+const maintenanceImg = assetUrl('/industrialmaintenance.jpeg')
 
 const services = [
   {

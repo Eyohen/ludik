@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../utils/assetUrl'
 
-const pipelineImg = '/pipeline.jpeg'
-const offshoreImg = '/rigsupportoperations.jpeg'
+const pipelineImg = assetUrl('/pipeline.jpeg')
+const offshoreImg = assetUrl('/rigsupportoperations.jpeg')
 const civilImg = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80'
-const crudeoilflow = '/crudeoilbayelsa.jpeg'
-const servicesheader = '/services.jpeg'
+const crudeoilflow = assetUrl('/crudeoilbayelsa.jpeg')
+const servicesheader = assetUrl('/services.jpeg')
 
 const caseStudies = [
   {

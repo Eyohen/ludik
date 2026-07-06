@@ -1,25 +1,26 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../utils/assetUrl'
 
 const heroImages = [
   {
-    src: '/hero1.jpeg',
+    src: assetUrl('/hero1.jpeg'),
     alt: 'Industrial energy facility with pipework and steel structures in Nigeria',
   },
   {
-    src: '/hero2.jpg',
+    src: assetUrl('/hero2.jpg'),
     alt: 'Energy infrastructure project site operated by industrial engineers',
   },
   {
-    src: '/hero3.png',
+    src: assetUrl('/hero3.png'),
     alt: 'Oil and gas engineering facility supporting African energy operations',
   },
 ]
 
-const africanEngineers = '/spanningthefull.jpeg'
-const refineryImage = '/facility.jpeg'
-const engineer = '/engineeringexcellence.jpeg'
+const africanEngineers = assetUrl('/spanningthefull.jpeg')
+const refineryImage = assetUrl('/facility.jpeg')
+const engineer = assetUrl('/engineeringexcellence.jpeg')
 
 const metrics = [
   { value: '1978409', label: 'CAC Registration Number' },
@@ -56,15 +57,15 @@ const industries = [
 ]
 
 const partners = [
-  { name: 'Chevron', logo: '/chevron.jpg' },
-  { name: 'Erasko', logo: '/erasko.jpeg' },
-  { name: 'Heritage', logo: '/HERITAGE.jpg' },
-  { name: 'Mobil', logo: '/Mobil.png' },
-  { name: 'NNPC', logo: '/nnpc.png' },
-  { name: 'Oando', logo: '/oando.jpg' },
-  { name: 'Seplat Energy', logo: '/seplat energy.png' },
-  { name: 'Shell', logo: '/SHELL.png' },
-  { name: 'VG Energy', logo: '/vgenergy.jpg' },
+  { name: 'Chevron', logo: assetUrl('/chevron.jpg') },
+  { name: 'Erasko', logo: assetUrl('/erasko.jpeg') },
+  { name: 'Heritage', logo: assetUrl('/HERITAGE.jpg') },
+  { name: 'Mobil', logo: assetUrl('/Mobil.png') },
+  { name: 'NNPC', logo: assetUrl('/nnpc.png') },
+  { name: 'Oando', logo: assetUrl('/oando.jpg') },
+  { name: 'Seplat Energy', logo: assetUrl('/seplat energy.png') },
+  { name: 'Shell', logo: assetUrl('/SHELL.png') },
+  { name: 'VG Energy', logo: assetUrl('/vgenergy.jpg') },
 ]
 
 const HomePage = () => {

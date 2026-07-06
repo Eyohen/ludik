@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { assetUrl } from '../utils/assetUrl'
 
-const logo = '/logo.jpeg'
+const logo = assetUrl('/logo.jpeg')
 
 const navItems = [
   { name: 'Home', href: '/' },

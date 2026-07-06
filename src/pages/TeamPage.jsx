@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { getTeam } from '../data/team'
+import { assetUrl } from '../utils/assetUrl'
 
-const teamHero = '/team.jpeg'
+const teamHero = assetUrl('/team.jpeg')
 
 const TeamPage = () => {
   const [team, setTeam] = useState([])
@@ -54,7 +55,7 @@ const TeamPage = () => {
                   <div className="h-64 overflow-hidden bg-[#0e2f5a]/10">
                     {member.imageUrl ? (
                       <img
-                        src={member.imageUrl}
+                        src={assetUrl(member.imageUrl)}
                         alt={member.name}
                         className="h-full w-full object-cover object-top"
                       />

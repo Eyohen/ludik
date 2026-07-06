@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getTeam, saveTeam } from '../../data/team'
+import { assetUrl } from '../../utils/assetUrl'
 
 const emptyForm = { name: '', title: '', bio: '', imageUrl: '' }
 
@@ -77,7 +78,7 @@ const AdminTeam = () => {
             <div key={m.id} className="overflow-hidden rounded-lg border border-[#e7ddaa] bg-white shadow-sm">
               <div className="h-44 overflow-hidden bg-[#0e2f5a]/10">
                 {m.imageUrl ? (
-                  <img src={m.imageUrl} alt={m.name} className="h-full w-full object-cover object-top" />
+                  <img src={assetUrl(m.imageUrl)} alt={m.name} className="h-full w-full object-cover object-top" />
                 ) : (
                   <div className="flex h-full items-center justify-center">
                     <span className="text-5xl font-extrabold text-[#071b3a]/20">{m.name.charAt(0)}</span>
@@ -138,7 +139,7 @@ const AdminTeam = () => {
                   className="w-full rounded-lg border border-[#e7ddaa] bg-[#fff8d8] px-3 py-2 text-sm text-[#071b3a] outline-none focus:border-[#071b3a]"
                   placeholder="https://..." />
                 {form.imageUrl && (
-                  <img src={form.imageUrl} alt="preview" className="mt-2 h-20 w-20 rounded-lg object-cover object-top" />
+                  <img src={assetUrl(form.imageUrl)} alt="preview" className="mt-2 h-20 w-20 rounded-lg object-cover object-top" />
                 )}
               </div>
               <div>

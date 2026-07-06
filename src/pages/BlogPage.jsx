@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { assetUrl } from '../utils/assetUrl'
 
 const BLOG_KEY = 'ludik_blog_posts'
 const BLOG_SEED_VERSION_KEY = 'ludik_blog_posts_seed_version'
@@ -14,7 +15,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-04-10',
     author: 'Ludik Energy Team',
-    imageUrl: '/oilrigsupport.jpeg',
+    imageUrl: assetUrl('/oilrigsupport.jpeg'),
   },
   {
     id: '2',
@@ -24,7 +25,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-04-05',
     author: 'Ludik Energy Team',
-    imageUrl: '/safetycom.jpeg',
+    imageUrl: assetUrl('/safetycom.jpeg'),
   },
   {
     id: '3',
@@ -34,7 +35,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-28',
     author: 'Ludik Energy Team',
-    imageUrl: '/pipelineinfrastructure.jpeg',
+    imageUrl: assetUrl('/pipelineinfrastructure.jpeg'),
   },
   {
     id: '4',
@@ -44,7 +45,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-20',
     author: 'Ludik Energy Team',
-    imageUrl: '/industriesweserve.jpeg',
+    imageUrl: assetUrl('/industriesweserve.jpeg'),
   },
   {
     id: '5',
@@ -54,7 +55,7 @@ const defaultPosts = [
     content: 'The oil and gas industry continues to evolve with advancements in technology, safety practices, and operational efficiency. Companies that embrace innovation and maintain strict compliance standards are better positioned to succeed in this dynamic environment.\n\nAt Ludik Energy Limited, we continuously adopt modern engineering practices to enhance performance, reduce risks, and deliver sustainable solutions for our clients.',
     date: '2026-03-12',
     author: 'Ludik Energy Team',
-    imageUrl: '/maintenance.jpeg',
+    imageUrl: assetUrl('/maintenance.jpeg'),
   },
   {
     id: '6',
@@ -64,7 +65,7 @@ const defaultPosts = [
     content: 'The Energy Cross River Expo themed "Unlocking Cross River Energy Using Sustainable Finance", brought together government officials, industry stakeholders, investors, development partners, energy experts and finance houses, to discuss strategies for advancing energy development in Cross River State. Ludik Energy Ltd heavily represented, engaged in dialogue, knowledge sharing, and collaboration aimed at promoting investment in the States energy sector. In addition to identifying energy opportunities, Public- Private Partnership models that could be deployed to finance and implement energy projects include:',
     date: '2026-02-25',
     author: 'Ludik Energy Team',
-    imageUrl: '/strategic.jpeg',
+    imageUrl: assetUrl('/strategic.jpeg'),
   },
   {
     id: '7',
@@ -74,7 +75,7 @@ const defaultPosts = [
     content: 'Digging into opportunities in the upstream oil and gas sector is the bane to expanding beyond the shores of Nigeria.Prospecting delegates from Guinea Sarlu came around to Nigeria on an inspection tour and capacity evaluation around our most recent sites where work is on-going at the moment.the inspection span from Lagos, Delta, Bayelsa and Rivers States particularly at our regulatory coordination, HSE implementation, Quality Assurance with Technical deployment and commission of projects. we hope that at the end, we all can shake hands over deliverables from Ludik Energy Limited',
     date: '2026-02-25',
     author: 'Ludik Energy Team',
-    imageUrl: '/sitetour.jpeg',
+    imageUrl: assetUrl('/sitetour.jpeg'),
   },
   
 ]
@@ -171,7 +172,7 @@ const BlogPage = () => {
             onClick={() => setExpanded(expanded === featuredPost.id ? null : featuredPost.id)}
           >
             <img
-              src={featuredPost.imageUrl}
+              src={assetUrl(featuredPost.imageUrl)}
               alt={featuredPost.title}
               className="h-72 w-full object-cover lg:h-full lg:min-h-[400px]"
             />
@@ -215,7 +216,7 @@ const BlogPage = () => {
                 onClick={() => setExpanded(expanded === post.id ? null : post.id)}
               >
                 <img
-                  src={post.imageUrl}
+                  src={assetUrl(post.imageUrl)}
                   alt={post.title}
                   className="h-44 w-full object-cover"
                 />

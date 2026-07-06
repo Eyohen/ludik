@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { assetUrl } from '../../utils/assetUrl'
 
 const BLOG_KEY = 'ludik_blog_posts'
 const BLOG_SEED_VERSION_KEY = 'ludik_blog_posts_seed_version'
@@ -115,7 +116,7 @@ const AdminBlog = () => {
               className="flex flex-col overflow-hidden rounded-lg border border-[#e7ddaa] bg-white shadow-sm"
             >
               {post.imageUrl && (
-                <img src={post.imageUrl} alt={post.title} className="h-36 w-full object-cover" />
+                <img src={assetUrl(post.imageUrl)} alt={post.title} className="h-36 w-full object-cover" />
               )}
               <div className="flex flex-1 flex-col p-5">
                 <span className="mb-2 inline-block rounded-md bg-[#f4d35e]/25 px-2 py-0.5 text-xs font-bold text-[#071b3a]">
