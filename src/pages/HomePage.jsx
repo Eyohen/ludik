@@ -17,7 +17,7 @@ const heroImages = [
   },
 ]
 
-const africanEngineers = '/industriesweserve.jpeg'
+const africanEngineers = '/spanningthefull.jpeg'
 const refineryImage = '/facility.jpeg'
 const engineer = '/engineeringexcellence.jpeg'
 

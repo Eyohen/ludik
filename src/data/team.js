@@ -22,7 +22,7 @@ export const defaultTeam = [
   {
     id: '3',
     name: 'Emilia-Cortez Eyo ACA, SaaS',
-    title: 'Human Resources',
+    title: 'Head of Human Resources/ Corporate',
     bio: 'Joined the company as the financial accountant and her approach to resources and divergent experiences gave way to being appointed the Human Resources Manager.',
     credentials: ['MSc Finance and Banking', 'Certificate; Human Psychology', 'HSE 1-3'],
     imageUrl: '/emilia.jpeg',
@@ -30,7 +30,7 @@ export const defaultTeam = [
   {
     id: '4',
     name: 'COBHAM EDET EFFIONG. \n\nACA, CFA, MBA, RIIAN, CISA',
-    title: 'Human Resources',
+    title: 'Head of Accounts',
     bio: 'combines technical depth in accounting, forensic investigation, and IT systems with 28 years of practical experience across high-risk industries Oil & Gas, delivering savings of over N500m through recovery of overpayments and blocking leakages. Qualifications & Education',
     credentials: ['Associate, Institute of Chartered Accountants of Nigeria ACA', 'Certified Forensic Accountant CFA', 'Certified Information Systems Auditor CISA – ISACA','Master of Business Administration MBA – University of Calabar','B.Sc. Accounting – University of Calabar','Registered Incorporated Internal Auditor of Nigeria'],
     imageUrl: '/cobham.jpeg',

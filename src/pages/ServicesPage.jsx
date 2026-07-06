@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 const servicesheader = '/services.jpeg'
 
-const rigImg = '/oilrigsupport.jpeg'
+const rigImg = '/oilrigprojectsupport.jpeg'
 const pipelineImg = '/pipelineinfrastructure.jpeg'
-const projectMgmtImg = '/projectmanagement.jpeg'
-const maintenanceImg = '/maintenance.jpeg'
+const projectMgmtImg = '/energyprojectman.jpeg'
+const maintenanceImg = '/industrialmaintenance.jpeg'
 
 const services = [
   {

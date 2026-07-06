@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 const pipelineImg = '/pipeline.jpeg'
-const offshoreImg = '/ogbainbiri.jpeg'
+const offshoreImg = '/rigsupportoperations.jpeg'
 const civilImg = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80'
-const crudeoilflow = '/crudeoilflow2.jpeg'
+const crudeoilflow = '/crudeoilbayelsa.jpeg'
 const servicesheader = '/services.jpeg'
 
 const caseStudies = [
   {
     id: 'pipeline-niger-delta',
-    title: 'Pipeline Installation Project',
+    title: 'Flowline and sectional replacement project ',
     location: 'Niger Delta, Nigeria',
     client: 'Confidential Client',
     scope: 'Design and installation of pipeline infrastructure across the Niger Delta region, including survey works, detailed engineering, procurement, construction, and commissioning.',
