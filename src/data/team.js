@@ -2,7 +2,7 @@ import { assetUrl } from '../utils/assetUrl'
 
 export const TEAM_KEY = 'ludik_team_members'
 const TEAM_SEED_VERSION_KEY = 'ludik_team_members_seed_version'
-const TEAM_SEED_VERSION = '2026-05-06-ludik-team-v3'
+const TEAM_SEED_VERSION = '2026-07-07-ludik-team-v4'
 
 export const defaultTeam = [
   {
@@ -39,23 +39,6 @@ export const defaultTeam = [
   },
 ]
 
-const seededDefaultNames = new Set([
-  'Engr. Chukwuemeka Okafor',
-  'Engr. Amaka Eze',
-  'Mr. Emeka Nwosu',
-  'Ulang Adie',
-  'Dr Jonathan Omini',
-  'Emilia-Cortez Eyo',
-])
-
-function isSeededTeam(list) {
-  return (
-    Array.isArray(list) &&
-    list.length === defaultTeam.length &&
-    list.every((member) => seededDefaultNames.has(member.name))
-  )
-}
-
 function seedDefaultTeam() {
   localStorage.setItem(TEAM_KEY, JSON.stringify(defaultTeam))
   localStorage.setItem(TEAM_SEED_VERSION_KEY, TEAM_SEED_VERSION)
@@ -69,9 +52,12 @@ export function getTeam() {
 
     if (stored) {
       const parsedTeam = JSON.parse(stored)
-      const shouldRefreshSeededTeam = seedVersion !== TEAM_SEED_VERSION && isSeededTeam(parsedTeam)
 
-      if (!shouldRefreshSeededTeam) {
+      if (seedVersion === 'custom') {
+        return parsedTeam
+      }
+
+      if (seedVersion === TEAM_SEED_VERSION) {
         return parsedTeam
       }
     }
