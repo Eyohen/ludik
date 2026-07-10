@@ -34,8 +34,8 @@ const caseStudies = [
 
   {
     id: 'crude-storage',
-    title: 'Crude oil Flow Storage, Yenagoa, Bayelsa, Nigeria',
-    location: 'Delta State, Nigeria',
+    title: 'Crude oil Flow station , Tebidaba , Bayelsa Nigeria',
+    location: 'Niger Delta, Nigeria',
     client: 'Amukpe',
     scope: 'High Pressure crude oil flow system project including P & id project including tank construction, bund wall and piping works, structural steelwork, and associated civil engineering.',
     outcome: 'Successfully delivered the full storage system with all civil, mechanical, and piping works completed to client specification. The facility has been operating without incident since commissioning.',

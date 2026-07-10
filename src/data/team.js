@@ -16,7 +16,7 @@ export const defaultTeam = [
   {
     id: '2',
     name: 'Dr Jonathan Omini',
-    title: 'Director Admin/Finance',
+    title: 'Finance/ Administration',
     bio: 'Ludik Energy has recognised its responsibility to contribute positively to the socio-economic development of its host communities while minimizing environmental impact.\n\nOur CSR commitment is sustainable practices, ethical conduct, and community engagement.',
     credentials: ['PhD Criminology (major Criminal Justice)'],
     imageUrl: assetUrl('/jonathanomini.jpg'),
