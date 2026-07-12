@@ -4,13 +4,12 @@ export const teamMembers = [
     name: 'Mr Patrick Azi',
     title: 'Director of Strategic Planning',
     bio: 'With a strong background in strategic management, organizational development, and business growth, shaping the organizations long-term vision and ensuring that our goals are translated into practical, measurable outcomes.\n\nHe also leads the development of strategic initiatives, identifies growth opportunities, coordinates cross-functional planning, and helps position the organization for sustainable success.\n\nThrough analytical thinking, effective leadership, and a results-driven approach, Mr Azi plays a vital role in guiding our organization toward achieving its mission and future objectives.',
-    credentials: ['BSc Accounting'],
     imageUrl: '/patrickazi.jpeg',
   },
   {
     id: '2',
     name: 'Ulang Adie',
-    title: 'Director Operations',
+    title: 'Director of Operations',
     bio: 'Ludik Energy is fully committed to the objectives of the Nigerian Oil and Gas Industry Content Development Act (NOGICD) Act, thus recognising the importance of utilizing local human and material resources to drive national economic growth, build capacity and ensure sustainable industry participation.',
     credentials: ['BSc Accounting'],
     imageUrl: '/ulangadie.jpeg',
@@ -18,7 +17,7 @@ export const teamMembers = [
   {
     id: '3',
     name: 'Dr Jonathan Omini',
-    title: 'Finance/ Administration',
+    title: 'Director of Finance/ Administration',
     bio: 'Ludik Energy has recognised its responsibility to contribute positively to the socio-economic development of its host communities while minimizing environmental impact.\n\nOur CSR commitment is sustainable practices, ethical conduct, and community engagement.',
     credentials: ['PhD Criminology (major Criminal Justice)'],
     imageUrl: '/jonathanomini.jpg',
