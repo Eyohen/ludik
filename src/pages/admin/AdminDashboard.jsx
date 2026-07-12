@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
+import { teamMembers } from '../../data/team'
 
 const KEYS = {
   BLOG: 'ludik_blog_posts',
-  TEAM: 'ludik_team_members',
   EMPLOYEES: 'ludik_employees',
   SUBMISSIONS: 'ludik_submissions',
 }
@@ -41,7 +41,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     setStats({
       blog: count(KEYS.BLOG),
-      team: count(KEYS.TEAM),
+      team: teamMembers.length,
       employees: count(KEYS.EMPLOYEES),
       submissions: count(KEYS.SUBMISSIONS),
     })

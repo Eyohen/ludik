@@ -1,17 +1,10 @@
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { getTeam } from '../data/team'
+import { teamMembers } from '../data/team'
 import { assetUrl } from '../utils/assetUrl'
 
 const teamHero = assetUrl('/team.jpeg')
 
 const TeamPage = () => {
-  const [team, setTeam] = useState([])
-
-  useEffect(() => {
-    setTeam(getTeam())
-  }, [])
-
   return (
     <div>
       {/* Hero */}
@@ -29,7 +22,7 @@ const TeamPage = () => {
               The people driving Ludik Energy forward.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#fff8d8]/80">
-              Our leadership team brings together decades of experience across oil and gas engineering, project management, and business development in Africa's energy sector.
+              Our leadership team brings together decades of experience across oil and gas engineering, project management, and business development in Africa&apos;s energy sector.
             </p>
           </motion.div>
         </div>
@@ -38,13 +31,8 @@ const TeamPage = () => {
       {/* Team grid */}
       <section className="bg-[#fff8d8] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          {team.length === 0 ? (
-            <div className="flex min-h-40 items-center justify-center rounded-lg border border-[#e7ddaa] bg-white">
-              <p className="text-[#526173]">No team members have been added yet.</p>
-            </div>
-          ) : (
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {team.map((member, i) => (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {teamMembers.map((member, i) => (
                 <motion.article
                   key={member.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -82,8 +70,7 @@ const TeamPage = () => {
                   </div>
                 </motion.article>
               ))}
-            </div>
-          )}
+          </div>
         </div>
       </section>
 
