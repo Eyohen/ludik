@@ -8,7 +8,7 @@ export const teamMembers = [
   },
   {
     id: '2',
-    name: 'Ulang Adie',
+    name: 'Mr Ulang Adie',
     title: 'Director of Operations',
     bio: 'Ludik Energy is fully committed to the objectives of the Nigerian Oil and Gas Industry Content Development Act (NOGICD) Act, thus recognising the importance of utilizing local human and material resources to drive national economic growth, build capacity and ensure sustainable industry participation.',
     credentials: ['BSc Accounting'],
@@ -19,7 +19,7 @@ export const teamMembers = [
     name: 'Dr Jonathan Omini',
     title: 'Director of Finance/ Administration',
     bio: 'Ludik Energy has recognised its responsibility to contribute positively to the socio-economic development of its host communities while minimizing environmental impact.\n\nOur CSR commitment is sustainable practices, ethical conduct, and community engagement.',
-    credentials: ['PhD Criminology (major Criminal Justice)', 'MS.C Criminology and Security Studies', 'BS.C Policy and Administrative Studies','Diploma in Public Administration','MEMBER NIGERIA INSTITUTE OF MANAGEMENT ( CHARTERED)'],
+    credentials: ['Ph.D Criminology (major Criminal Justice)', 'Ms.C Criminology and Security Studies', 'Bs.C Policy and Administrative Studies','Diploma in Public Administration','Member Nigeria Institute of Management (Chartered)'],
     imageUrl: '/jonathanomini.jpg',
   },
   {
