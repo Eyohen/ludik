@@ -19,7 +19,7 @@ export const teamMembers = [
     name: 'Dr Jonathan Omini',
     title: 'Director of Finance/ Administration',
     bio: 'Ludik Energy has recognised its responsibility to contribute positively to the socio-economic development of its host communities while minimizing environmental impact.\n\nOur CSR commitment is sustainable practices, ethical conduct, and community engagement.',
-    credentials: ['PhD Criminology (major Criminal Justice)'],
+    credentials: ['PhD Criminology (major Criminal Justice)', 'MS.C Criminology and Security Studies', 'BS.C Policy and Administrative Studies','Diploma in Public Administration','MEMBER NIGERIA INSTITUTE OF MANAGEMENT ( CHARTERED)'],
     imageUrl: '/jonathanomini.jpg',
   },
   {
