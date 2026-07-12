@@ -32,7 +32,7 @@ export const teamMembers = [
   },
   {
     id: '5',
-    name: 'COBHAM EDET EFFIONG. \n\nACA, CFA, MBA, RIIAN, CISA',
+    name: 'Cobham Edet Effiong. \n\nACA, CFA, MBA, RIIAN, CISA',
     title: 'Head of Accounts',
     bio: 'combines technical depth in accounting, forensic investigation, and IT systems with 28 years of practical experience across high-risk industries Oil & Gas, delivering savings of over N500m through recovery of overpayments and blocking leakages. Qualifications & Education',
     credentials: ['Associate, Institute of Chartered Accountants of Nigeria ACA', 'Certified Forensic Accountant CFA', 'Certified Information Systems Auditor CISA – ISACA', 'Master of Business Administration MBA – University of Calabar', 'B.Sc. Accounting – University of Calabar', 'Registered Incorporated Internal Auditor of Nigeria'],
