@@ -31,7 +31,7 @@ const TeamPage = () => {
       {/* Team grid */}
       <section className="bg-[#fff8d8] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
               {teamMembers.map((member, i) => (
                 <motion.article
                   key={member.id}
