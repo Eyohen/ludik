@@ -40,7 +40,7 @@ const TeamPage = () => {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="overflow-hidden rounded-lg border border-[#e7ddaa] bg-white shadow-sm shadow-[#071b3a]/5"
                 >
-                  <div className="h-64 overflow-hidden bg-[#0e2f5a]/10">
+                  <div className="h-[700px] overflow-hidden bg-[#0e2f5a]/10">
                     {member.imageUrl ? (
                       <img
                         src={assetUrl(member.imageUrl)}
