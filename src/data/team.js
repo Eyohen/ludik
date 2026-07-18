@@ -16,7 +16,7 @@ export const teamMembers = [
   },
   {
     id: '3',
-    name: 'Dr Jonathan Omini',
+    name: 'Dr Jonathan Omini Ph.D',
     title: 'Director Administration, Finance & Corporate Services',
     bio: 'As one of the founders and Director of Administration, Finance & Corporate Services at Ludik Energy Limited, Dr. Jonathan Omini provides strategic leadership in overseeing the organization’s administrative, financial, corporate services functions, ensuring operational efficiency, financial accountability, and organizational excellence. He leads the development and implementation of systems, policiees and processes that support the company’s day-to-day operations while driving sustainable growth and effective corporate governance.\n\nDr. Omini brings a wealth of expertise in corporate administration organizational management and public policy, underpinned by an impressive academic background. He holds a PhD in Criminology with a specialization in Criminal Justice, an M.Sc in Criminology and Security Studies, a B.sc. in Policy and Administrative Studies, and a Diploma in Public Administration. His commitment to professional excellence is further demonstrated through his status as a Chattered Member of the Nigerian Institute of Management (NIM).',
     credentials: ['Ph.D Criminology (major Criminal Justice)', 'Ms.C Criminology and Security Studies', 'Bs.C Policy and Administrative Studies','Diploma in Public Administration','Member Nigeria Institute of Management (Chartered)'],

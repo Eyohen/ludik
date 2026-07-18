@@ -23,6 +23,69 @@ const highlights = [
   },
 ]
 
+const completedProjects = [
+  {
+    name: '10" Clough Creek–Tebidaba Pipeline (10 km) Sectional Replacement to 12"',
+    date: 'December 2020',
+  },
+  {
+    name: 'Idu 3LS Flowline Sectional Replacement (4" × 3.250 m, Schedule 80)',
+    date: 'March 2025',
+  },
+  {
+    name: 'Idu 3SS Flowline Sectional Replacement (4" × 3.250 m, Schedule 80)',
+    date: 'March 2025',
+  },
+  {
+    name: 'Idu 10SS Flowline Sectional Replacement and Harvested Portion',
+    date: 'March 2025',
+  },
+  {
+    name: 'Isoko 3LS and Oleh 4LS Restoration and Procurement',
+    date: 'August 2025',
+  },
+  {
+    name: 'Idu 10S Flowline Sectional Replacement and Harvested Portion',
+    date: 'September 2025',
+  },
+  {
+    name: 'Egbegoro 12 Flowline Sectional Replacement',
+    date: 'September 2025',
+  },
+  {
+    name: '4" × 163 m, Schedule 80, Obrikom 12T Flowline Sectional Replacement Activity',
+    date: 'October 2025',
+  },
+  {
+    name: '4" × 2.5 km Obrikom 9 Flowline Sectional Replacement',
+    date: 'November 2025',
+  },
+  {
+    name: '17.5 km Idu 6ST Flowline (6", Schedule 120) Sectional Replacement',
+    date: 'November 2025',
+  },
+  {
+    name: '17.5 km Idu V Flowline (6", Schedule 120) Sectional Replacement',
+    date: 'December 2025',
+  },
+  {
+    name: '4" × 1,500 m Oshie 12SS/LS Flowline Laying Project Works',
+    date: 'December 2025',
+  },
+  {
+    name: '4" × 3.4 km Oshie 8SS/LS Flowline Laying Project Works',
+    date: 'December 2025',
+  },
+  {
+    name: 'Idu NAG Manifold Modification for Production Through MP Header',
+    date: 'February 2026',
+  },
+  {
+    name: '56 km Clough Creek–Tebidaba Pipeline Sectional Replacement Site Inspections',
+    date: 'June 2026',
+  },
+]
+
 const ProjectsPage = () => {
   return (
     <div>
@@ -65,6 +128,38 @@ const ProjectsPage = () => {
               <p className="mt-2 text-sm leading-6 text-[#526173]">{h.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Completed projects */}
+      <section className="bg-[#071b3a] px-4 py-20 text-white sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#f4d35e]">Project Experience</p>
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Selected completed projects.</h2>
+            <p className="mt-4 text-lg leading-8 text-[#fff8d8]/75">
+              Pipeline, flowline, restoration, inspection, and production infrastructure works delivered across the Niger Delta.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {completedProjects.map((project, index) => (
+              <motion.article
+                key={`${project.name}-${project.date}`}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, delay: (index % 2) * 0.08 }}
+                className="flex gap-4 rounded-lg border border-white/15 bg-white/5 p-5"
+              >
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#f4d35e]" />
+                <div>
+                  <h3 className="font-bold leading-7 text-white">{project.name}</h3>
+                  <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-[#f4d35e]">{project.date}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
